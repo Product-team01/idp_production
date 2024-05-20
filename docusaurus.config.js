@@ -184,6 +184,16 @@ const docs = [
       },
     },
   },
+  {
+    id: 'Automation',
+    path: 'docs/Automation',
+    routeBasePath: '/Automation',
+    versions: {
+      current: {
+        label: '0.5.x',
+      },
+    },
+  },
 
   // Mobile UI Kits
   // {
