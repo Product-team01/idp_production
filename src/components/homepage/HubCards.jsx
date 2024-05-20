@@ -69,7 +69,7 @@ export default function HubCards() {
         title="Automation Hub"
         description="One shot learning, build custom workflows, no-code automation."
         link="https://vuesandbox.vercel.app/Automation"
-        buttonLabel="Workflow Manager"
+        comingSoon={true}
         iconSrc="https://d1r1e7xjkfj7nz.cloudfront.net/AutomationHub2x.png"
       />
       {/* <HubCard
