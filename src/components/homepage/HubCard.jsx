@@ -28,7 +28,7 @@ const HubCard = ({ title, description, link, buttonLabel, additionalButtonLabel,
         </div>
       </>
     )}
-    {!comingSoon && <a href={link} className="ViewMoreButton">View More</a>}
+    {!comingSoon && <a href={link} className="ViewMoreButton"></a>}
   </div>
 );
 
