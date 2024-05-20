@@ -476,17 +476,17 @@ const config = {
             }, ],
            
           },
-          {
-            label: 'Customer Hub',
-            type: 'dropdown',
-            className: 'dyte-dropdown',
-            items: [{
-              type: 'html',
-              value: sdksHTML,
-              className: 'dyte-dropdown',
-            }, ],
+          // {
+          //   label: 'Customer Hub',
+          //   type: 'dropdown',
+          //   className: 'dyte-dropdown',
+          //   items: [{
+          //     type: 'html',
+          //     value: sdksHTML,
+          //     className: 'dyte-dropdown',
+          //   }, ],
            
-          },
+          // },
           {
             label: 'Data Hub',
             type: 'dropdown',
