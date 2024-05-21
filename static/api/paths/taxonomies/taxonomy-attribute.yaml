@@ -11,6 +11,12 @@ post:
         description: correlation id to track requests
         schema:
           type: string
+      - name: Accept-Encoding
+        in: header
+        description: indicates the content encoding that the client can understand
+        schema:
+          type: string
+          default: gzip
       - name: taxonomy_id
         in: path
         description: unique identifier of the taxonomy
@@ -34,6 +40,16 @@ post:
                 description: >-
                   unique display name of the taxonomy attribute value. This
                   can be modified and will be used for display purposes.
+              multi_value:
+                type: boolean
+                description: >-
+                  Boolean set to True if the attribute can accept multiple value and set to False if the attribute is single valued.
+                default: False
+              type:
+                type: string
+                description: >-
+                  Used to set the type of the attribute. Color Hex type can be used to make the attribute available for choosing the color
+                default: ""
       required: true
     responses:
       '200':
@@ -94,6 +110,12 @@ delete:
       description: correlation id to track requests
       schema:
         type: string
+    - name: Accept-Encoding
+      in: header
+      description: indicates the content encoding that the client can understand
+      schema:
+        type: string
+        default: gzip
     - name: taxonomy_id
       in: path
       description: unique identifier of the taxonomy

@@ -6,6 +6,11 @@ get:
     is lesser in number.
   operationId: get_feeds
   parameters:
+  - name: x-correlation-id
+    in: header
+    description: correlation id to track requests
+    schema:
+      type: string
   - required: true
     schema:
       title: Catalog Id
@@ -35,6 +40,7 @@ get:
     description: List of feed_ids to be excluded from the response
     name: exclude
     in: query
+
   responses:
     '200':
       description: Successful Response

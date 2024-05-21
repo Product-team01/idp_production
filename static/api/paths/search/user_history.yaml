@@ -4,6 +4,12 @@ post:
   summary: Search User History
   description: Get the user history for the given list of events
   operationId: search_user_history
+  parameters:
+    - name: x-correlation-id
+      in: header
+      description: correlation id to track requests
+      schema:
+        type: string
   requestBody:
     content:
       application/json:
@@ -31,9 +37,11 @@ post:
               PDPPageView:
                 - - <product_id>
                   - 1660843626.756383
+                  - '../../schemas/Metadata_sample.yaml'
               Buy:
                 - - <product_id>
                   - 1660843627.756383
+                  - '../../schemas/Metadata_sample.yaml'
     '400':
       description: Bad Request response
       content:

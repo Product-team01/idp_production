@@ -4,6 +4,17 @@ get:
   summary: List Account Metadata, Pages and events
   description: List metadata, Pages and events for the account
   operationId: get_metadata_pages
+  parameters:
+  - name: x-correlation-id
+    in: header
+    description: correlation id to track requests
+    schema:
+      type: string
+  - name: platform
+    in: query
+    description: query to distinguish what platform is asking for metadata pages
+    schema:
+      type: string
   responses:
     '200':
       description: Successful Response

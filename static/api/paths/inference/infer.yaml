@@ -1,7 +1,7 @@
 post:
   tags:
   - inference
-  summary: Raise Request
+  summary: Infers tags
   description: Infers tags for any given input data in modes defined above.
   operationId: infer
   parameters:
@@ -30,9 +30,9 @@ post:
       content:
         application/json:
           schema:
-            oneOf:
-              - $ref:  '../../schemas/inference/InferPostResponse.yaml'
-              - $ref:  '../../schemas/inference/InferAsyncResponse.yaml'
+           oneOf:
+            - $ref:  '../../schemas/inference/InferPostResponse.yaml'
+            - $ref:  '../../schemas/inference/InferAsyncResponse.yaml'
     '400':
       description: |
         Bad request:

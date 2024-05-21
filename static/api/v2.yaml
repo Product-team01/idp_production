@@ -79,6 +79,10 @@ paths:
   # /api/v1/mail/template_preview:
   #   $ref: paths/mail/template_preview.yaml  
 
+  # IDP Sandbox APIs
+  /api/v1/documents/infer/sync:
+    $ref: idpsandbox/paths/document/infer_sync.yaml
+
 components:
   parameters:
     $ref: parameters/_index.yaml

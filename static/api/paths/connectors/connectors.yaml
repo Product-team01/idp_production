@@ -1,10 +1,15 @@
 get:
   tags:
-  - connectors
+  - connectors_old
   summary: List supported Connectors
   description: Discover supported connectors with configuration parameters required.
   operationId: list_connectors
-  parameters: []
+  parameters:
+    - name: x-correlation-id
+      in: header
+      description: correlation id to track requests
+      schema:
+        type: string
   responses:
     '200':
       description: Successful Response
@@ -18,7 +23,7 @@ get:
                 data:
                   type: array
                   items:
-                    $ref: '../../schemas/Connector.yaml'
+                    $ref: '../../schemas/ConnectorOld.yaml'
           examples:
             example-1:
               value:

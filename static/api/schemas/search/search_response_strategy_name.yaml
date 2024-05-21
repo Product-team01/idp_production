@@ -8,6 +8,9 @@ properties:
   correlation_id:
     type: string
     example: 879b2-0717fa5232-4342-424879b2-0717
+  resolution_id:
+    type: string
+    example: 814h6-0717fa5232-4342-424879b2-0717
   status:
     description: state of the request
     type: string
@@ -53,10 +56,13 @@ properties:
                     - hierarchy: category>dress>typ 
                       hierarchy_id: 123>456>789
                       name: type
-                      id: 789
+                      id: abfa9a19-1004-4f96-84c9-91f79e5c10d1
+                      reviewed_status: APPROVED
                       results:
                         - confidence: 0.982
-                          prediction: aline
+                          value: aline
+                          value_id : b6504efb-cfb7-4cbf-b921-bcf0020b1a26
+                      prediction_value_box: null
                 
                 
 

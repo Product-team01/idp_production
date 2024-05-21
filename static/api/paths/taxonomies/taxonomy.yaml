@@ -11,6 +11,12 @@
         description: correlation id to track requests
         schema:
           type: string
+      - name: Accept-Encoding
+        in: header
+        description: indicates the content encoding that the client can understand
+        schema:
+          type: string
+          default: gzip
       - name: taxonomy_id
         in: path
         description: unique identifier of the taxonomy
@@ -22,6 +28,11 @@
         description: >-
           to retain hierarchy or not. if true, constructs and responds in
           hierarchy format else gives a flat list 
+        schema:
+          type: boolean
+      - name: pivot
+        in: query
+        description: Boolean to decide if the response should accommodate pivot changes where parent attribute id will be a list. Default value will be false and parent attribute id will be a string
         schema:
           type: boolean
     responses:
@@ -70,6 +81,12 @@
       description: correlation id to track requests
       schema:
         type: string
+    - name: Accept-Encoding
+      in: header
+      description: indicates the content encoding that the client can understand
+      schema:
+        type: string
+        default: gzip
     - name: taxonomy_id
       in: path
       description: unique identifier of the taxonomy

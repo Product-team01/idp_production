@@ -1,11 +1,18 @@
 post:
   tags:
     - search
-  summary: Returns a list of search recommendations
-  description: Returns the list of objects
+  summary: Returns a list of search recommendations.
+  description: The results will be returned based on the strategy or module or page name specified in the request.
   operationId: get_search_results
+  parameters:
+  - name: x-correlation-id
+    in: header
+    description: correlation id to track requests
+    schema:
+      type: string
   requestBody:
     description: Recommendations payload
+    required: true
     content:
       application/json:
         schema:
@@ -27,6 +34,10 @@ post:
                     - Image Src
                     - page link
                     - Vendor
+                  filters:
+                    - field: Vendor
+                      operator: exact
+                      value: Adidas
                   context:
                     Handle: 46696836bf
           search_request_module_name:
@@ -127,6 +138,7 @@ post:
                     errors: {}
                 request_id: b9eafaa47bd811edbab84293e19886f8
                 correlation_id: null
+                resolution_id: null
             module_name:
               value:
                 status: ok
@@ -161,6 +173,7 @@ post:
                     page_num: 1
                 request_id: 67a082227bd411eda69df28c070c22cc
                 correlation_id: null
+                resolution_id: null
             page_name:
               value:
                 status: ok
@@ -195,10 +208,12 @@ post:
                     page_num: 1
                 request_id: e0b2426e7bd811edb4c82ea90644a30b
                 correlation_id: null
+                resolution_id: null
             text_search_call:
               value:
                 request_id: b68136287c6c11ed9123bee057a13136
                 correlation_id: null
+                resolution_id: null
                 status: SUCCESS
                 data:
                   autocorrect_query: null
