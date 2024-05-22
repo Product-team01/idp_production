@@ -5,7 +5,6 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import HubCards from '../components/homepage/HubCards';
 
-
 // Import your custom components
 import HeroSection from '../components/homepage/HeroSection';
 import GuidesAndSamples from '../components/homepage/GuidesAndSamples';
@@ -48,7 +47,8 @@ export default function Homepage() {
       <HubCards />
     </div> */}
       <CommunitySection />
-     
+         
+
     </Layout>
   );
 }
