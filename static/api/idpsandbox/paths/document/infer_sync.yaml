@@ -1,7 +1,7 @@
 post:
   tags:
     - idpSandbox
-  summary: infer sync API
+  summary: Infer sync API
   description: get document by id
   operationId: inferSyncDocument
   parameters:

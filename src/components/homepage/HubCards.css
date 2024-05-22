@@ -55,13 +55,16 @@
 }
 
 .ComponentsButtonOutlined, .ComponentsButton {
-  width: 100%;
+  width: 246px;
+  height: 36px;
+  flex-grow: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: -5px;
-  text-decoration: none;
+  padding: 0;
+  border-radius: 4px;
+  border: var(--ifm-link-color)
 }
 
 .hub-card-button {

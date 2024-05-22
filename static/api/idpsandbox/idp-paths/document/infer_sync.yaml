@@ -1,7 +1,7 @@
 post:
   tags:
-    - 2dotx
-  summary: infer sync API
+    - Document Processing
+  summary: Infer sync API
   description: get document by id
   operationId: getDocument
   parameters:

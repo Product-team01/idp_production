@@ -1,6 +1,6 @@
 get:
   tags:
-  - 2dotx
+  - Document Processing
   summary: get document by id
   description: get document by id
   operationId: getDocument
