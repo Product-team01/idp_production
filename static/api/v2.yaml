@@ -49,7 +49,8 @@ security:
 paths:
   # Document APIs
   /api/v1/documents/infer/sync:
-    $ref: ../api-docs/idpsandbox/idp-paths/document/infer_sync.yaml
+    $ref: ../api/idpsandbox/idp-paths/document/infer_sync.yaml
+ 
 
 
 
