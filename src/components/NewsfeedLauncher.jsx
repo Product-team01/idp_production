@@ -73,6 +73,8 @@
 
 // export default NewsfeedLauncher;
 
+// 
+
 import React, { useEffect, useState } from 'react';
 import './NewsfeedLauncher.css'; // Make sure this path is correct
 
@@ -80,22 +82,19 @@ const NewsfeedLauncher = () => {
   const [unreadCount, setUnreadCount] = useState(0);
 
   useEffect(() => {
-    // Check if Product Fruits is loaded and window is defined for SSR frameworks
-    if (typeof window !== 'undefined' && window.productFruits && window.productFruits.api) {
-      // Setup the listener and attach the widget
-      const unsubscribe = window.productFruits.api.announcementsV2.listen('newsfeed-unread-count-changed', (data) => {
-        setUnreadCount(data.count);
-      });
-      window.productFruits.api.announcementsV2.attachNewsWidgetToElement(document.getElementById('newsfeed-launcher'));
+    // Simulate unread count fetching
+    const fetchUnreadCount = () => {
+      // Simulate an API call to fetch the unread count
+      const unreadCountFromApi = 5; // Example value
+      setUnreadCount(unreadCountFromApi);
+    };
 
-      // Cleanup the listener on unmount
-      return () => unsubscribe && unsubscribe();
-    }
+    fetchUnreadCount();
   }, []);
 
-  // Handler to open the newsfeed
+  // Handler to open the newsfeed URL in a new tab
   const handleNewsfeedOpen = () => {
-    window.productFruits.api.announcementsV2.showNewsfeed();
+    window.open('https://announcekit.co/idp-sandbox/product-updates/', '_blank');
   };
 
   return (
@@ -111,3 +110,4 @@ const NewsfeedLauncher = () => {
 };
 
 export default NewsfeedLauncher;
+
