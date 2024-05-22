@@ -43,6 +43,7 @@
 import React from 'react';
 import HubCard from './HubCard'; // Ensure the HubCard component is imported
 import './HubCards.css'; // Ensure the CSS file is imported
+import HubCard1 from './HubCard1'; // Ensure the HubCard component is imported
 
 export default function HubCards() {
   return (
@@ -65,11 +66,11 @@ export default function HubCards() {
         additionalButtonLink="https://vuesandbox.vercel.app//Digital-Experience-Manager/Metrics"
         iconSrc="https://d1r1e7xjkfj7nz.cloudfront.net/Users2x.png"
       /> */}
-      <HubCard
+      <HubCard1
         title="Automation Hub"
         description="One shot learning, build custom workflows, no-code automation."
         link="https://vuesandbox.vercel.app/Automation"
-        comingSoon={true}
+        buttonLabel="Workflow Manager"
         iconSrc="https://d1r1e7xjkfj7nz.cloudfront.net/AutomationHub2x.png"
       />
       {/* <HubCard

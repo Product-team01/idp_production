@@ -4,7 +4,7 @@
 import React from 'react';
 import './HubCards.css'; // Ensure the CSS file is imported
 
-const HubCard = ({ title, description, link, buttonLabel, additionalButtonLabel, additionalButtonLink, iconSrc, comingSoon }) => (
+const HubCard1 = ({ title, description, link, buttonLabel, additionalButtonLabel, additionalButtonLink, iconSrc, comingSoon }) => (
   <div className="ComponentHub-Cards">
     <div className="Hub-Placeholder">
       <img src={iconSrc} alt={`${title} Icon`} className="Icon32pxData-Hub" />
@@ -23,13 +23,11 @@ const HubCard = ({ title, description, link, buttonLabel, additionalButtonLabel,
         <div className="ComponentsButtonOutlined">
           <a href={link} className="hub-card-button">{buttonLabel}</a>
         </div>
-        <div className="ComponentsButtonOutlined">
-          <a href={additionalButtonLink} className="hub-card-button AdditionalButton">{additionalButtonLabel}</a>
-        </div>
+        
       </>
     )}
     {!comingSoon && <a href={link} className="ViewMoreButton"></a>}
   </div>
 );
 
-export default HubCard;
+export default HubCard1;
