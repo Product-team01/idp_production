@@ -1,9 +1,9 @@
 post:
   tags:
-    - idpSandbox
-  summary: infer sync API
-  description: get document by id
-  operationId: inferSyncDocument
+  - 2dotx
+  summary: create the document
+  description: create the document
+  operationId: createDocuments
   parameters:
   - name: x-api-key
     in: header
@@ -25,7 +25,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: '../../idp-schemas/document/infer_sync_req_body.yaml'
+          $ref: '../../idp-schemas/inference/add_document.yaml'
     required: true
   responses:
     '200':
@@ -41,11 +41,18 @@ post:
                 enum:
                 - SUCCESS
                 - FAILURE
-              $ref: '../../idp-schemas/document/infer_sync_resp.yaml'
+              request_id:
+                description: id to backtrack the request in internal services
+                type: string
+              correlation_id:
+                description: id sent by the caller to backtrack the request
+                type: string
+              data:
+                $ref: '../../idp-schemas/inference/add_document_response.yaml'
     '500':
       description: Internal Server Error
       content:
         application/json:
           schema:
-            $ref: '../../../schemas/errors/failure-response.yaml'
+            $ref: '../../../idp-schemas/errors/failure-response.yaml'
   x-codegen-request-body-name: body

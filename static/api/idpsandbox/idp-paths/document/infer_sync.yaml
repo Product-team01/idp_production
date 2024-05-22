@@ -1,9 +1,9 @@
 post:
   tags:
-    - idpSandbox
+    - 2dotx
   summary: infer sync API
   description: get document by id
-  operationId: inferSyncDocument
+  operationId: getDocument
   parameters:
   - name: x-api-key
     in: header

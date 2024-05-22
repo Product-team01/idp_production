@@ -1,9 +1,9 @@
-post:
+get:
   tags:
-    - idpSandbox
-  summary: infer sync API
+  - 2dotx
+  summary: get document by id
   description: get document by id
-  operationId: inferSyncDocument
+  operationId: getDocument
   parameters:
   - name: x-api-key
     in: header
@@ -20,13 +20,6 @@ post:
     description: account id of the account
     schema:
       type: string
-  requestBody:
-    description: document that need to be added
-    content:
-      application/json:
-        schema:
-          $ref: '../../idp-schemas/document/infer_sync_req_body.yaml'
-    required: true
   responses:
     '200':
       description: successful operation
@@ -41,11 +34,12 @@ post:
                 enum:
                 - SUCCESS
                 - FAILURE
-              $ref: '../../idp-schemas/document/infer_sync_resp.yaml'
+              data:
+                $ref: '../../idp-schemas/inference/get_document_response.yaml'
     '500':
       description: Internal Server Error
       content:
         application/json:
           schema:
             $ref: '../../../schemas/errors/failure-response.yaml'
-  x-codegen-request-body-name: body
+            
