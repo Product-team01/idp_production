@@ -35,9 +35,9 @@
   border-radius: 4px;
   background-color: var(--ifm-card-background-color);
   text-decoration: none;
-  border: 1px solid var(--docs-color-primary-tint); /* Use theme-specific border color */
-  box-shadow: var(--docs-color-primary-tint); /* Use theme-specific shadow */
-
+  border: 1px solid var(--card-border); /* Use theme-specific border color */
+  box-shadow: var(--card-shadow); /* Use theme-specific shadow */
+  
 }
 
 
@@ -135,9 +135,9 @@
   z-index: -1;
   background-color: #2700b5; /* Deep blue background */
   border-radius: 5px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), /* Light source inner shadow */
-              7px 7px 20px 0px rgba(0, 0, 0, 0.2), /* Softer black shadow for depth */
-              4px 4px 5px 0px rgba(0, 0, 0, 0.1); /* Subtle black shadow for added realism */
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+  7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+  4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
