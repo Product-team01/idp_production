@@ -1216,3 +1216,64 @@ html[data-theme='dark'] .video_sidebar_header > div > a::before {
   content: ' ‹';
   margin-right: 4px;
 }
+
+.hub-card-button {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10px;
+  color: var(--hub-button-text);
+  background-color: var(--hub-button-bg);
+  border: 1px solid var(--hub-button-border);
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 2px;
+  text-decoration: none;
+  font-weight: bold;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.hub-card-button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #2700b5; /* Button hover background color */
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+              7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+              4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hub-card-button:hover {
+  color: #fff; /* Text color on hover */
+}
+
+.hub-card-button:hover:after {
+  left: 0;
+  width: 100%; /* Full width on hover */
+}
+
+.hub-card-button:active {
+  top: 2px; /* Simulate button press */
+}
+
+/* Optional: Adjust the button's box shadow to be more visible in light mode and subtle in dark mode */
+[data-theme='light'] .hub-card-button:after {
+  box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.1),
+              7px 7px 20px 0px rgba(0, 0, 0, 0.2),
+              4px 4px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .hub-card-button:after {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.1),
+              7px 7px 20px 0px rgba(255, 255, 255, 0.15),
+              4px 4px 5px 0px rgba(255, 255, 255, 0.1);
+}
