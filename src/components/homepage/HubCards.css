@@ -35,9 +35,9 @@
   border-radius: 4px;
   background-color: var(--ifm-card-background-color);
   text-decoration: none;
-  border: 1px solid var(--card-border); /* Use theme-specific border color */
-  box-shadow: var(--card-shadow); /* Use theme-specific shadow */
-  transition: border 0.3s ease, box-shadow 0.3s ease; 
+  border: 1px solid var(--docs-color-primary-tint); /* Use theme-specific border color */
+  box-shadow: var(--docs-color-primary-tint); /* Use theme-specific shadow */
+
 }
 
 
