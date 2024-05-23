@@ -20,12 +20,12 @@
   background-color: var(--ifm-card-background-color);
   text-decoration: none;
    /* Initial shadow with no visible effect */
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+   /* Smooth transition for shadow effect */
+   border: 1px solid #d6d6d6;
+   box-shadow: 0 4px 8px 0 #f4f4f4;
 }
 
-.ComponentHub-Cards:hover {
-  box-shadow:10px 10px 10px rgba(183, 183, 183, 0.2); /* Darker shadow on hover */
-}
+
 
 .Hub-Placeholder {
   width: 64px;
@@ -71,6 +71,7 @@
   padding: 0;
   border-radius: 4px;
   border: var(--ifm-link-color)
+ 
 }
 
 /* .hub-card-button {
@@ -115,7 +116,7 @@
   top: 0;
   right: 0;
   z-index: -1;
-  background-color: #663dff;
+  background-color: #2700b5;
   border-radius: 5px;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
               7px 7px 20px 0px rgba(0, 0, 0, 0.1),
