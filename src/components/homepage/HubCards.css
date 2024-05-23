@@ -6,8 +6,8 @@
 }
 
 .ComponentHub-Cards {
-  width: 286px;
-  height: 354px; /* Restored original height */
+  width: 400px; /* Increased width */
+  height: 300px; /* Decreased height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,6 +19,12 @@
   border: solid 1px var(--ifm-color-emphasis-200);
   background-color: var(--ifm-card-background-color);
   text-decoration: none;
+   /* Initial shadow with no visible effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.ComponentHub-Cards:hover {
+  box-shadow:10px 10px 10px rgba(183, 183, 183, 0.2); /* Darker shadow on hover */
 }
 
 .Hub-Placeholder {
@@ -42,7 +48,7 @@
 .Data-Hub, .Coming-Soon {
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
-  font-weight: bold;
+  font-weight: bold; /* Ensure text is bold */
   line-height: 1.36;
   color: var(--ifm-font-color-base);
 }
@@ -67,7 +73,7 @@
   border: var(--ifm-link-color)
 }
 
-.hub-card-button {
+/* .hub-card-button {
   width: 100%;
   padding: 10px;
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -79,26 +85,76 @@
   cursor: pointer;
   margin-bottom: 2px; 
   text-decoration: none;
+  font-weight: bold;
+} */
+
+.hub-card-button {
+  position: relative; /* Needed to properly position the :after pseudo-element */
+  overflow: hidden; /* Ensures the pseudo-element does not extend outside the button */
+  width: 100%;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  color: var(--ifm-link-color); /* Default color, will change on hover */
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 2px; 
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px; /* Adjusted to match the new button style */
+  transition: color 0.3s ease; /* Smooth transition for text color */
 }
 
+.hub-card-button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+              7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+              4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hub-card-button:hover {
+  fill: #1e1e1e; /* White text on hover */
+}
+
+.hub-card-button:hover:after {
+  left: 0;
+  width: 100%; /* Expands the pseudo-element to cover the entire button on hover */
+}
+
+.hub-card-button:active {
+  top: 2px; /* Simulates a button press effect */
+}
+
+
 .hub-card-button.AdditionalButton {
-  margin-top: 2px; /* Reduced gap */
+  margin-top: 2px;
   text-decoration: none;
 }
 
 .hub-card-button:hover {
-  text-decoration: none; /* Remove underline on hover */
+  text-decoration: none;
 }
 
 .ViewMoreButton {
-  background-color: transparent; /* No fill */
-  border: none; /* No border */
+  background-color: transparent;
+  border: none;
   font-size: 10px;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
 .ViewMoreButton:hover {
-  text-decoration: none; /* Remove underline on hover */
+  text-decoration: none;
 }
 
 .Coming-Soon {
