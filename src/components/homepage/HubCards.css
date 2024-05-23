@@ -37,7 +37,7 @@
   text-decoration: none;
   border: 1px solid var(--card-border); /* Use theme-specific border color */
   box-shadow: var(--card-shadow); /* Use theme-specific shadow */
-  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow effects */
+  transition: border 0.3s ease, box-shadow 0.3s ease; 
 }
 
 
