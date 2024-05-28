@@ -3,36 +3,23 @@ title: Google Cloud Platform
 sidebar_position: 1
 slug: /
 ---
- Step 1: Access APIs & Services
 
-Navigate to the **APIs & Services** section within your GCP project.
+## Navigate to the APIs & Services section within your Google Cloud Service.
 
-![APIs and Services screen](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-100541.png "APIs and Services")
- 
- Step 2: Select Credentials
+![Step 1](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240527-142050.png)
+**Select Credentials**
 
-In the APIs & Services dashboard, click on the **Credentials** tab.
+![Step 2](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-100644.png)
+**Create an OAuth Client ID credentials and choose Application type as Web application.**
 
-![Credentials screen](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-100644.png "Credentials")
+![Step 3](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-100901.png)
 
- Step 3: Create an OAuth Client ID
+**Copy the client ID, client secret from the created Application**
 
-Create an OAuth Client ID credentials. Choose **Web application** as the application type.
+![Step 4](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240527-142217.png)
+**Paste the Client ID, secret key into Vue’s SSO configuration screen and click on Confirm**
 
-![OAuth Client ID creation screen](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-100901.png "OAuth Client ID Creation")
+![Step 5](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240527-143413.png)
+**Copy & Paste the generated Redirect URI’s to Authorized redirect URI's in your application**
 
-### Important Details
-
-- The created application will provide you with a **Client ID** and **Client Secret**. These are crucial for your application's authentication processes.
-
-![Client ID and Secret](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240422-101523.png "Client ID and Secret")
-
- Step 4: Configure Redirect URIs
-
-Paste the Redirect URIs generated into the **Authorized redirect URIs** section in your application settings.
-
-![Setting Redirect URIs](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240430-111507.png "Redirect URIs")
-
-For more detailed instructions and visuals, visit [this link](https://d1r1e7xjkfj7nz.cloudfront.net/).
-
-Make sure to save your configuration after making these changes.
+![Step 6](https://d1r1e7xjkfj7nz.cloudfront.net/image-20240527-142814.png)
